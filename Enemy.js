@@ -1,6 +1,6 @@
 class Enemy {
     constructor() {
-        this.speed = 2;
+        this.speed = CELLSIZE/5;
         this.color = "white"
         this.health = this.color.length - 1;
         this.width = CELLSIZE;
@@ -10,16 +10,17 @@ class Enemy {
         this.randHeight = Math.random()*canvas.height;
         this.x = this.calcX();
         this.y = this.calcY();
-        
+        this.LEFT = 0;
+        this.RIGHT = 1;
+        this.UP = 2;
+        this.DOWN = 3;
     }
 
     calcX() {
-        if (this.quadrant == 0){
-            // left
+        if (this.quadrant == this.LEFT){
             return -this.width;
         } 
-        else if (this.quadrant == 1){
-            // right
+        else if (this.quadrant == this.RIGHT){
             return canvas.width + this.width;
         } else {
             return this.randWidth;
@@ -27,12 +28,10 @@ class Enemy {
     }
     
     calcY() {
-         if (this.quadrant == 2){
-            // up
+         if (this.quadrant == this.UP){
             return -this.height;
         } 
-        else if (this.quadrant == 3){
-            // down
+        else if (this.quadrant == this.DOWN){
             return canvas.height + this.height;
         } else {
             return this.randHeight;

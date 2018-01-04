@@ -1,7 +1,6 @@
 var canvas = document.getElementById('mycanvas');
 var ctx = canvas.getContext('2d');
 
-
 // CONSTANTS
 const MIN_ENEMY_SPAWN_TIME = 10
 const START_ENEMY_SPAWN_TIME = MIN_ENEMY_SPAWN_TIME + 60
@@ -164,7 +163,6 @@ function loop(){
     ENEMY_SPAWN_TIME *= 0.9999;
 }
 
-// Start new game
 var startGame = ()=>{
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
