@@ -8,6 +8,15 @@ var Enemy = function(){
         let quadrant = parseInt(Math.random()*4);
         let randWidth = Math.random()*canvas.width;
         let randHeight = Math.random()*canvas.height;
+        // if (quadrant == 0){
+        //     
+        // } else if (quadrant == 1){
+        //     
+        // }  else if (quadrant == 2){
+        //     
+        // }  else if (quadrant == 3) {
+        //     
+        // }
         switch (quadrant){
             // left
             case 0:
