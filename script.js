@@ -142,7 +142,7 @@ function checkCollisions(){
 function generateEnemies(){
     timeSinceLastEnemy ++;
     if (timeSinceLastEnemy > ENEMY_SPAWN_TIME){
-        var enemy = new Enemy();
+        var enemy = new Enemy(canvas);
         enemies.push(enemy);
         timeSinceLastEnemy = 0;
     }
