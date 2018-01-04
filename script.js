@@ -1,37 +1,30 @@
 import { Enemy }     from "Enemy";
 import { Character } from "Character";
 import { Explosion } from "Explosion";
+import { * } from "Keys";
 
 var canvas = document.getElementById('mycanvas');
 var ctx = canvas.getContext('2d');
+
+
+// CONSTANTS
+const MIN_ENEMY_SPAWN_TIME = 10
+const START_ENEMY_SPAWN_TIME = MIN_ENEMY_SPAWN_TIME + 60
 const CELLSIZE = 10;
-// keys
-const W_KEY = 87;
-const A_KEY = 65;
-const S_KEY = 83;
-const D_KEY = 68;
-const UP_KEY = 38;
-const DOWN_KEY = 40; 
-const LEFT_KEY = 37;
-const RIGHT_KEY = 39; 
-const SPACE_KEY = 32;
+
+// GLOBALS
+var ENEMY_SPAWN_TIME = undefined;
+var timeSinceLastEnemy = undefined;
+var bullets = undefined;
+var enemies = undefined;
+var score = undefined;
+var time = undefined;
 
 // DIRECTIONS
 var LEFT = false;
 var RIGHT = false;
 var UP = false;
 var DOWN = false;
-
-const MIN_ENEMY_SPAWN_TIME = 10
-const START_ENEMY_SPAWN_TIME = MIN_ENEMY_SPAWN_TIME + 60
-
-// GLOBALS
-var ENEMY_SPAWN_TIME = undefined;
-var timeSinceLastEnemy = 0;
-var bullets = [];
-var enemies = [];
-var score = 0;
-var time = undefined;
 
 // Redefine common Math function
 var abs  = (n)=>Math.abs(n);
@@ -183,6 +176,7 @@ var startGame = ()=>{
     
     fillScreen("black");
     ENEMY_SPAWN_TIME = START_ENEMY_SPAWN_TIME;
+    timeSinceLastEnemy = 0;
     enemies = [];
     bullets = [];
     score = 0;
