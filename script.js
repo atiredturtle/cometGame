@@ -1,8 +1,3 @@
-import { Enemy }     from "Enemy";
-import { Character } from "Character";
-import { Explosion } from "Explosion";
-import { * } from "Keys";
-
 var canvas = document.getElementById('mycanvas');
 var ctx = canvas.getContext('2d');
 
@@ -187,9 +182,6 @@ var startGame = ()=>{
 
 document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler);
-document.addEventListener("mousedown", mouseDownHandler)
-document.addEventListener('mousemove', mouseMoveHandler);
-document.addEventListener("mouseup", mouseUpHandler)
 
 var char = new Character();
 startGame()

@@ -1,4 +1,4 @@
-export var Enemy = function(){
+var Enemy = function(){
     this.speed = 2;
     this.color = "white"
     this.health = this.color.length - 1;

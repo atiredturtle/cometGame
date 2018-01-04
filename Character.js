@@ -1,4 +1,4 @@
-export var Character = function() {
+var Character = function() {
     this.width = CELLSIZE;
     this.height = CELLSIZE;
     this.baseColor = rgba(255,255,255,0.7);

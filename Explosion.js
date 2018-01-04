@@ -1,4 +1,4 @@
-export var Explosion = function(obj, dist, maxSize, color){
+var Explosion = function(obj, dist, maxSize, color){
     this.maxSize = maxSize;
     this.size = CELLSIZE;
     this.growRate = 1.5;
