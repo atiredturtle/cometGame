@@ -17,7 +17,6 @@ class Enemy {
         if (this.quadrant == 0){
             return -this.width;
         } 
-
         // right
         else if (this.quadrant == 1){
             return canvas.width + this.width;

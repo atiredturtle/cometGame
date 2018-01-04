@@ -87,7 +87,8 @@ class Character {
         if (this.timeToBomb <= 0) {
             ctx.fillStyle = this.color;
         }
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        let mod = max(abs(this.vx), abs(this.vy))
+        ctx.fillRect(this.x, this.y, this.width + mod, this.height + mod);
         this.vx *= this.drag;
         this.vy *= this.drag;
         if (this.timeToBomb > 0) this.timeToBomb--;
